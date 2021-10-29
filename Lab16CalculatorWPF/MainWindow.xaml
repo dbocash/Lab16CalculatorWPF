@@ -1,0 +1,48 @@
+﻿<Window x:Class="Lab16CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab16CalculatorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="AliceBlue">
+        <GroupBox Header="Input" Margin="30,30,0,0" Height="130" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <StackPanel Margin="0,10,0,0">
+                <Grid>
+                    <Label Content="Principle" Margin="0,5,0,0" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="Interest" Margin="0,30,0,0" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="Years" Margin="0,55,0,0" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtPrinciple" Margin="60,10,0,0" Height="20" Width="100" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtInterest" Margin="60,35,0,0" Height="20" Width="100" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtYears" Margin="60,60,0,0" Height="20" Width="100" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Compound Frequency" Margin="240, 30, 0, 0" Height="150" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Margin="0,10,0,0">
+                <Grid>
+                    <RadioButton x:Name="rdoMonthly" Content="Monthly" Margin="10,10,0.2,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rdoQuarterly" Content="Quarterly" Margin="10,35,0.2,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rdoSemiAnually" Content="Semy-Annually" Margin="10,60,0.2,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton Content="Annually" Margin="10,85,0.2,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Results" Margin="30,190,0,0" Height="80" Width="450" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <StackPanel Margin="0,10,0,0" >
+                <Grid>
+                    <Label Content="Interest Earned" Margin="10,10,0,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtInterestEarned" Margin="110,15,0,0" Height="20" Width="100" TextWrapping="Wrap" Text=""  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="New Value" Margin="230,10,0,0" Height="25" Width="100"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCurrentValue" Margin="320,15,0,0" Height="20" Width="100" TextWrapping="Wrap" Text=""  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top" Width="75" Click="btnCalculate_Click"/>
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="420,110,0,0" VerticalAlignment="Top" Width="75" Click="btnClose_Click"/>
+
+    </Grid>
+</Window>
